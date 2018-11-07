@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to restaurant_path(@review.restaurant)
     else
-      render :new
+      redirect_to restaurant_path(@review.restaurant)
     end
   end
 
