@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div class="container">
+    <%= simple_form_for [@restaurant, @review], defaults: { input_html: { class: "form-inline" } } do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating, collection: 0..5 %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
